@@ -12,7 +12,8 @@ const CadastroScreen = () => {
     const navegacao = useNavigation();
     
     const executarCadastro = () => {
-        Alert.alert("Olá", "Usuário: " + email);
+        Alert.alert("Cadastro Efetuado com Sucesso!", "Usuário: " + email);
+        navegacao.navigate('tela_inicial')
     };
 
     return (
