@@ -3,16 +3,16 @@ import {Text, View, Button, TextInput, Alert} from 'react-native';
 import { StyleSheet } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
-const LoginScreen = () => {
+
+const CadastroScreen = () => {
 
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
 
     const navegacao = useNavigation();
     
-    const executarLogin = () => {
-        Alert.alert("Login Efetuado com Sucesso!", "Usuário: " + email);   
-        navegacao.navigate('tela_inicial')
+    const executarCadastro = () => {
+        Alert.alert("Olá", "Usuário: " + email);
     };
 
     return (
@@ -20,14 +20,16 @@ const LoginScreen = () => {
           <Text>E-mail</Text>
           <TextInput value = {email} onChangeText={setEmail}/>
           <Text>Senha</Text>
-          <TextInput  value = {senha} onChangeText={setSenha} secureTextEntry/>
-          <Button title='LOGAR' onPress={executarLogin}/>
+          <TextInput value = {senha} onChangeText={setSenha} secureTextEntry/>
+          <Button title='Cadastrar' onPress={executarCadastro}/>
           <Button title = 'HOME' style={{ paddingVertical: 15}} onPress = {() => navegacao.navigate('home')}/>
 
-          <Text style={styles.hyperlinkStyle} onPress = {
-            () => navegacao.navigate('cadastro')}> Cadastre-se</Text>
+          <Text style={styles.hyperlinkStyle} 
+          onPress = {() => navegacao.navigate('login')}>Logar-se</Text>
+
         </View>    
-    );
+    
+      );
 };
 
 const styles = StyleSheet.create({
@@ -41,8 +43,8 @@ const styles = StyleSheet.create({
     color: 'blue',
     textAlign: "right",
     padding: 20,
-  }, 
-  
+  },
  }
 );
-export default LoginScreen;
+
+export default CadastroScreen;

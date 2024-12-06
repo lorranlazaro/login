@@ -3,12 +3,12 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
-const Home = () => {
+const TelaInicial = () => {
     const navegacao = useNavigation();
     return (
         <View style={style.container}>
-        <Text>CLIQUE PARA ACESSAR</Text>
-          <Button title = 'ENTRAR' onPress = {() => navegacao.navigate('login')}/>
+        <Text>BEM VINDO</Text>
+          <Button title = 'HOME' onPress = {() => navegacao.navigate('home')}/>
           <StatusBar style="auto" />
         </View>    
     
@@ -30,4 +30,4 @@ const style = StyleSheet.create({
     
 });
 
-export default Home;
+export default TelaInicial;
