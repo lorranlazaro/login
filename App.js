@@ -11,6 +11,7 @@ import TelaInicial from './screens/tela_inicial';
 const Stack = createStackNavigator();
 
 export default function App() {
+
   return (
       <NavigationContainer>
         <Stack.Navigator initialRouteName="home">
