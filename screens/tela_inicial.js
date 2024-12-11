@@ -7,8 +7,8 @@ const TelaInicial = () => {
   const navegacao = useNavigation();
   return (
     <View style={style.container}>
-      <Text>BEM VINDO</Text>
-      <Button title='HOME' onPress={() => navegacao.navigate('home')} />
+      <Text>BEM VINDO!</Text>
+      <Button title='HOME SCREEN' onPress={() => navegacao.navigate('home')} />
       <StatusBar style="auto" />
     </View>
 
